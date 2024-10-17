@@ -1,17 +1,18 @@
-import GameScene from "./scenes/GameScene.js";
+import BallScene from "./scene/BallScene.js";
 
-let config = {
+const config = {
     type: Phaser.AUTO,
-    width: 1920,
-    height: 949,
+    width: window.innerWidth,
+    height: window.innerHeight,
+    backgroundColor: '#ffffff',
     physics: {
         default: 'arcade',
         arcade: {
-            gravity: {y: 0},
-            debug: true
+            gravity: { y: 0 },
+            debug: false
         }
     },
-    scene: GameScene
+    scene: BallScene
 };
 
-var Game = new Phaser.Game(config);
+const game = new Phaser.Game(config);
